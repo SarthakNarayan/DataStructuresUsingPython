@@ -7,7 +7,8 @@ class Node:
 class BinaryTree:
     def __init__(self,root):
         self.root = Node(root)
-    
+
+# Depth level traversal
     def pre_order(self,start,traversal):
         """root -> left -> right"""
         if start:
@@ -31,6 +32,8 @@ class BinaryTree:
             traversal = self.post_order(start.right,traversal)
             traversal += (str(start.data) + "->")
         return traversal
+
+# Level order traversal we use queue
 
 tree = BinaryTree(1)
 tree.root.left = Node(2)
